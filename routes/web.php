@@ -14,11 +14,13 @@ use App\Http\Controllers\SessionController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('form');
 });
 
 
 Route::get('putdata',[SessionController::class, 'putData']);
 Route::get('getdata',[SessionController::class, 'getData']);
 Route::get('deletedata',[SessionController::class, 'deleteData']);
-
+Route::get('deletep',[SessionController::class, 'deletep']);
+Route::get('home',[SessionController::class, 'index'])->name('home');
+Route::post('store',[SessionController::class,'store']);
